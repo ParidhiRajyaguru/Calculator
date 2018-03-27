@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="Calculator.css">
+</head>	
+
+<body>
+
+	<script>
+        function disp(value){
+        	document.calcform.result.value +=value;
+        }
+        
+        function del(value){
+        	document.calcform.result.value =value;
+        }
+
+        function cal(value){
+        	document.calcform.result.value= eval(document.calcform.result.value);
+        }
+
+
+
+	</script>
+<h2 align="center">Calculator</h2>
+<hr>
+<div id="main">
+
+<form name="calcform" >
+
+<table id="calctable" align="center">
+
+    <tr>
+    	<td colspan="5"><input type = "text" name="result" placeholder="0" disabled style="text-align:right"></input></td>
+
+    </tr>
+
+	<tr>
+		<td class="singlecolumn" colspan="5"> <button class="disable">m+</button> <button class="disable">m-</button> <button class="disable">mc</button> <button class="disable">mr</button> <button type="button" onclick="disp(value)" value="/" class="small">/</button> </td>
+	</tr>
+	
+	<tr>
+		<td><button type="button" onclick="disp(value)" value="7" class="num">7</button></td>
+		<td><button type="button" onclick="disp(value)" value="8" class="num">8</button></td>
+		<td><button type="button" onclick="disp(value)" value="9" class="num">9</button></td>
+		<td><button type="button" onclick="disp(value)" value="*" class="small">*</button></td>
+	</tr>
+
+	<tr>
+		<td><button type="button" onclick="disp(value)" value="4" class="num">4</button></td>
+		<td><button type="button" onclick="disp(value)" value="5" class="num">5</button></td>
+		<td><button type="button" onclick="disp(value)" value="6" class="num">6</button></td>
+		<td><button type="button" onclick="disp(value)" value="-" class="small">-</button></td>
+	</tr>
+
+	<tr>
+		<td><button type="button" onclick="disp(value)" value="1" class="num">1</button></td>
+		<td><button type="button" onclick="disp(value)" value="2" class="num">2</button></td>
+		<td><button type="button" onclick="disp(value)" value="3" class="num">3</button></td>
+		<td><button type="button" onclick="disp(value)" value="+" class="small">+</button></td>
+	</tr>
+
+	<tr>
+		<td><button type="button" onclick="disp(value)" value="0" class="num">0</button></td>
+		<td><button type="button" onclick="disp(value)" value="." class="num">.</button></td>
+		<td><button type="button" onclick="del(value)" value="" class="num">c</button></td>
+		<td><button type="button" onclick="cal(value)" class="small">=</button></td>
+	</tr>	
+
+</table>
+</form>
+</div>
+
+</body>
+</html>	
